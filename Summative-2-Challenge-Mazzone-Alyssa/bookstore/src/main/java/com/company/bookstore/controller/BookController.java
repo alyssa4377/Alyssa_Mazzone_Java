@@ -32,14 +32,14 @@ public class BookController {
 
     @PostMapping("/books")
     @ResponseStatus(HttpStatus.CREATED)
-    public Book addBook(@RequestBody Book Book) {
-        return repo.save(Book);
+    public Book addBook(@RequestBody Book book) {
+        return repo.save(book);
     }
 
     @PutMapping("/books")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void updateBook(@RequestBody Book Book) {
-        repo.save(Book);
+    public void updateBook(@RequestBody Book book) {
+        repo.save(book);
     }
 
     @DeleteMapping("/books/{book_id}")

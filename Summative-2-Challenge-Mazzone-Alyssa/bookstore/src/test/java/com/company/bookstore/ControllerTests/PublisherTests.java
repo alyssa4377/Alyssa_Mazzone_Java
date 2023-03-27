@@ -1,11 +1,8 @@
 package com.company.bookstore.ControllerTests;
 import com.company.bookstore.controller.BookController;
-import com.company.bookstore.models.Book;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Test;
-import com.company.bookstore.repository.PublisherRepository;
 import com.company.bookstore.models.Publisher;
-import com.company.bookstore.controller.PublisherController;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
@@ -33,7 +30,7 @@ public class PublisherTests {
         publisher.setStreet("Broad St");
         publisher.setCity("Savannah");
         publisher.setState("GA");
-        publisher.setPostal_code("31401");
+        publisher.setPostalCode("31401");
         publisher.setPhone("912-555-5555");
         publisher.setEmail("perd@perdroasters.com");
 

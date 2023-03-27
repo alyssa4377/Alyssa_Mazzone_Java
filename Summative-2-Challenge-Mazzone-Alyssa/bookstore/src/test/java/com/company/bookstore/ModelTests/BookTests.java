@@ -9,7 +9,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.transaction.Transactional;
-import java.util.List;
 import java.util.Optional;
 
 import static org.junit.Assert.assertEquals;
@@ -34,11 +33,11 @@ public class BookTests {
         Book book = new Book();
         book.setBook_id(4);
         book.setIsbn("is bn");
-        book.setPublish_date("9/7/2015");
-        book.setAuthor_id(1);
+        book.setPublishDate("9/7/2015");
+        book.setAuthorId(1);
         book.setTitle("The best title");
         book.setPrice(9.5f);
-        book.setPublisher_id(2);
+        book.setPublisherId(2);
 
         bookRepo.save(book);
 
@@ -54,11 +53,11 @@ public class BookTests {
         Book book = new Book();
         book.setBook_id(4);
         book.setIsbn("is bn");
-        book.setPublish_date("9/7/2015");
-        book.setAuthor_id(1);
+        book.setPublishDate("9/7/2015");
+        book.setAuthorId(1);
         book.setTitle("The best title");
         book.setPrice(9.5f);
-        book.setPublisher_id(2);
+        book.setPublisherId(2);
 
         bookRepo.save(book);
 
@@ -76,11 +75,11 @@ public class BookTests {
         Book book = new Book();
         book.setBook_id(4);
         book.setIsbn("is bn");
-        book.setPublish_date("9/7/2015");
-        book.setAuthor_id(1);
+        book.setPublishDate("9/7/2015");
+        book.setAuthorId(1);
         book.setTitle("The best title");
         book.setPrice(9.5f);
-        book.setPublisher_id(2);
+        book.setPublisherId(2);
 
         bookRepo.save(book);
 
@@ -98,22 +97,22 @@ public class BookTests {
 
         book.setBook_id(4);
         book.setIsbn("is bn");
-        book.setPublish_date("9/7/2015");
-        book.setAuthor_id(1);
+        book.setPublishDate("9/7/2015");
+        book.setAuthorId(1);
         book.setTitle("The best title");
         book.setPrice(9.5f);
-        book.setPublisher_id(2);
+        book.setPublisherId(2);
 
         bookRepo.save(book);
 
 
         book1.setBook_id(4);
         book1.setIsbn("is bn");
-        book1.setPublish_date("9/7/2015");
-        book1.setAuthor_id(1);
+        book1.setPublishDate("9/7/2015");
+        book1.setAuthorId(1);
         book1.setTitle("The best title");
         book1.setPrice(9.5f);
-        book1.setPublisher_id(2);
+        book1.setPublisherId(2);
 
         bookRepo.save(book1);
 

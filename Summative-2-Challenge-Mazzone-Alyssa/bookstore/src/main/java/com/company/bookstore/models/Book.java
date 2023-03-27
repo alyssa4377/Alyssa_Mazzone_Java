@@ -1,23 +1,33 @@
 package com.company.bookstore.models;
 
 import java.util.Objects;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-public class Book {
+import javax.persistence.*;
+import java.io.Serializable;
 
-    private int book_id;
+@Entity
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+@Table(name = "book")
+public class Book implements Serializable  {
+
+    @Id
+    @Column(name = "book_id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
     private String isbn;
-    private String publish_date;
-    private int author_id;
+    private String publishDate;
+    private int authorId;
     private String title;
-    private int publisher_id;
+    private int publisherId;
     private float price;
 
     public int getBook_id() {
-        return book_id;
+        return id;
     }
 
     public void setBook_id(int book_id) {
-        this.book_id = book_id;
+        this.id = book_id;
     }
 
     public String getIsbn() {
@@ -28,20 +38,20 @@ public class Book {
         this.isbn = isbn;
     }
 
-    public String getPublish_date() {
-        return publish_date;
+    public String getPublishDate() {
+        return publishDate;
     }
 
-    public void setPublish_date(String publish_date) {
-        this.publish_date = publish_date;
+    public void setPublishDate(String publishDate) {
+        this.publishDate = publishDate;
     }
 
-    public int getAuthor_id() {
-        return author_id;
+    public int getAuthorId() {
+        return authorId;
     }
 
-    public void setAuthor_id(int author_id) {
-        this.author_id = author_id;
+    public void setAuthorId(int authorId) {
+        this.authorId = authorId;
     }
 
     public String getTitle() {
@@ -52,12 +62,12 @@ public class Book {
         this.title = title;
     }
 
-    public int getPublisher_id() {
-        return publisher_id;
+    public int getPublisherId() {
+        return publisherId;
     }
 
-    public void setPublisher_id(int publisher_id) {
-        this.publisher_id = publisher_id;
+    public void setPublisherId(int publisherId) {
+        this.publisherId = publisherId;
     }
 
     public double getPrice() {
@@ -73,17 +83,17 @@ public class Book {
         if (this == o) return true;
         if (!(o instanceof Book)) return false;
         Book book = (Book) o;
-        return book_id == book.book_id &&
-                author_id == book.author_id &&
-                publisher_id == book.publisher_id &&
+        return id == book.id &&
+                authorId == book.authorId &&
+                publisherId == book.publisherId &&
                 Double.compare(book.price, price) == 0 &&
                 Objects.equals(isbn, book.isbn) &&
-                Objects.equals(publish_date, book.publish_date) &&
+                Objects.equals(publishDate, book.publishDate) &&
                 Objects.equals(title, book.title);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(book_id, isbn, publish_date, author_id, title, publisher_id, price);
+        return Objects.hash(id, isbn, publishDate, authorId, title, publisherId, price);
     }
 }

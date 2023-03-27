@@ -36,7 +36,7 @@ public class PublisherTests {
             publisher.setStreet("Broad St");
             publisher.setCity("Savannah");
             publisher.setState("GA");
-            publisher.setPostal_code("31401");
+            publisher.setPostalCode("31401");
             publisher.setPhone("912-555-5555");
             publisher.setEmail("perd@perdroasters.com");
 
@@ -57,7 +57,7 @@ public class PublisherTests {
             publisher.setStreet("Broad St");
             publisher.setCity("Savannah");
             publisher.setState("GA");
-            publisher.setPostal_code("31401");
+            publisher.setPostalCode("31401");
             publisher.setPhone("912-555-5555");
             publisher.setEmail("perd@perdroasters.com");
 
@@ -79,7 +79,7 @@ public class PublisherTests {
             publisher.setStreet("Broad St");
             publisher.setCity("Savannah");
             publisher.setState("GA");
-            publisher.setPostal_code("31401");
+            publisher.setPostalCode("31401");
             publisher.setPhone("912-555-5555");
             publisher.setEmail("perd@perdroasters.com");
 
@@ -100,7 +100,7 @@ public class PublisherTests {
             publisher.setStreet("Broad St");
             publisher.setCity("Savannah");
             publisher.setState("GA");
-            publisher.setPostal_code("31401");
+            publisher.setPostalCode("31401");
             publisher.setPhone("912-555-5555");
             publisher.setEmail("perd@perdroasters.com");
 
@@ -110,7 +110,7 @@ public class PublisherTests {
             publisher2.setStreet("Price St");
             publisher2.setCity("Atlanta");
             publisher2.setState("GA");
-            publisher2.setPostal_code("30332");
+            publisher2.setPostalCode("30332");
             publisher2.setPhone("404-555-5555");
             publisher2.setEmail("john@johnsroaster.com");
 

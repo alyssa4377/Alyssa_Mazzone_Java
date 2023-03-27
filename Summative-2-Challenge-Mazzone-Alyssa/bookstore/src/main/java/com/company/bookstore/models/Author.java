@@ -1,40 +1,51 @@
 package com.company.bookstore.models;
 import java.util.Objects;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-public class Author {
+import javax.persistence.*;
+import java.io.Serializable;
 
-    private int author_id;
-    private String first_name;
-    private String last_name;
+@Entity
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+@Table(name = "author")
+public class Author implements Serializable {
+
+    @Id
+    @Column(name = "author_id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+
+    private String firstName;
+    private String lastName;
     private String street;
     private String city;
     private String state;
-    private String postal_code;
+    private String postalCode;
     private String phone;
     private String email;
 
     public int getAuthorId() {
-        return author_id;
+        return id;
     }
 
     public void setAuthorId(int id) {
-        this.author_id = author_id;
+        this.id = id;
     }
 
     public String getFirstName() {
-        return first_name;
+        return firstName;
     }
 
     public void setFirstName(String firstName) {
-        this.first_name = firstName;
+        this.firstName = firstName;
     }
 
     public String getLastName() {
-        return last_name;
+        return lastName;
     }
 
     public void setLastName(String lastName) {
-        this.last_name = lastName;
+        this.lastName = lastName;
     }
 
     public String getStreet() {
@@ -62,11 +73,11 @@ public class Author {
     }
 
     public String getPostalCode() {
-        return postal_code;
+        return postalCode;
     }
 
     public void setPostalCode(String postalCode) {
-        this.postal_code = postalCode;
+        this.postalCode = postalCode;
     }
 
     public String getPhone() {
@@ -117,13 +128,13 @@ public class Author {
     @Override
     public String toString() {
         return "Author{" +
-                "author_id=" + author_id +
-                ", firstName='" + first_name + '\'' +
-                ", lastName='" + last_name + '\'' +
+                "author_id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
                 ", street='" + street + '\'' +
                 ", city='" + city + '\'' +
                 ", state='" + state + '\'' +
-                ", postalCode='" + postal_code + '\'' +
+                ", postalCode='" + postalCode + '\'' +
                 ", phone='" + phone + '\'' +
                 ", email='" + email + '\'' +
                 '}';

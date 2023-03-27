@@ -1,7 +1,6 @@
 package com.company.bookstore.ControllerTests;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Test;
-import com.company.bookstore.repository.BookRepository;
 import com.company.bookstore.models.Book;
 import com.company.bookstore.controller.BookController;
 import org.junit.runner.RunWith;
@@ -28,11 +27,11 @@ public class BookTests {
         Book book = new Book();
         book.setBook_id(4);
         book.setIsbn("is bn");
-        book.setPublish_date("9/7/2015");
-        book.setAuthor_id(1);
+        book.setPublishDate("9/7/2015");
+        book.setAuthorId(1);
         book.setTitle("The best title");
         book.setPrice(9.5f);
-        book.setPublisher_id(2);
+        book.setPublisherId(2);
 
         String inputJson = mapper.writeValueAsString(book);
         String outputJson = mapper.writeValueAsString(book);
