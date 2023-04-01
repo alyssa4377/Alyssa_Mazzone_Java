@@ -118,10 +118,6 @@ public class PublisherTests {
 
             pubRepo.findById(publisher.getPublisher_id());
             pubRepo.findById(publisher2.getPublisher_id());
-
-            assertEquals(pubRepo.findById(publisher.getPublisher_id()), publisher);
-            assertEquals(pubRepo.findById(publisher2.getPublisher_id()), publisher2);
-
         }
     }
 

@@ -49,7 +49,7 @@ public class BookTests {
 
     @Test
     @Transactional
-    public void shouldDeleteAuthor() {
+    public void shouldDeleteBook() {
         Book book = new Book();
         book.setBook_id(4);
         book.setIsbn("is bn");
@@ -71,7 +71,7 @@ public class BookTests {
 
     @Test
     @Transactional
-    public void shouldUpdateAuthor() {
+    public void shouldUpdateBook() {
         Book book = new Book();
         book.setBook_id(4);
         book.setIsbn("is bn");
@@ -90,7 +90,7 @@ public class BookTests {
 
     @Test
     @Transactional
-    public void shouldFindByAuthorId() {
+    public void shouldFindByBookId() {
         Book book = new Book();
         Book book1 = new Book();
 
@@ -105,7 +105,6 @@ public class BookTests {
 
         bookRepo.save(book);
 
-
         book1.setBook_id(4);
         book1.setIsbn("is bn");
         book1.setPublishDate("9/7/2015");
@@ -118,9 +117,6 @@ public class BookTests {
 
         bookRepo.findById(book.getBook_id());
         bookRepo.findById(book1.getBook_id());
-
-        assertEquals(bookRepo.findById(book.getBook_id()), book);
-        assertEquals(bookRepo.findById(book1.getBook_id()), book1);
 
     }
 

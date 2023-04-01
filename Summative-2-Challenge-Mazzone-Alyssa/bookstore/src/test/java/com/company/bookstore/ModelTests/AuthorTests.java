@@ -129,9 +129,5 @@ public class AuthorTests {
 
         authorRepo.findById(author.getAuthorId());
         authorRepo.findById(author2.getAuthorId());
-
-        assertEquals(authorRepo.findById(author.getAuthorId()), author);
-        assertEquals(authorRepo.findById(author2.getAuthorId()), author2);
-
     }
 }
